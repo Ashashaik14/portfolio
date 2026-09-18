@@ -1,0 +1,328 @@
+.about-section {
+  position: relative;
+  background: #07070A;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.about-header-row {
+  margin-bottom: 60px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* System Profile Card (Screenshot 4 design) */
+.about-profile-card-container {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.about-profile-card {
+  position: relative;
+  background: #0E0E14;
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: var(--transition-smooth);
+}
+
+.about-profile-card:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 40px rgba(124, 58, 237, 0.25);
+}
+
+.profile-card-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(124, 58, 237, 0.3), transparent);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.profile-card-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+}
+
+.profile-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--purple-bright);
+}
+
+.tag-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--purple-bright);
+  box-shadow: 0 0 8px var(--purple-bright);
+}
+
+.profile-id {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.profile-image-box {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #050508;
+}
+
+.about-card-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.profile-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14, 14, 20, 0.9) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.profile-card-footer {
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-card-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.profile-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #D8B4FE;
+}
+
+.badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #34D399;
+}
+
+/* Right Content Column */
+.about-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-intro-greeting {
+  margin-bottom: 20px;
+}
+
+.greeting-pill {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--purple-bright);
+  margin-bottom: 8px;
+}
+
+.about-subheading {
+  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.about-paragraph {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.about-paragraph.lead {
+  font-size: 1.12rem;
+  color: #E4E4E7;
+  font-weight: 400;
+}
+
+/* Quick Specs Under Card */
+.about-quick-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  .about-quick-specs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quick-spec-item {
+  background: rgba(19, 24, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.spec-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #818CF8;
+  text-transform: uppercase;
+}
+
+.spec-value {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #F1F5F9;
+}
+
+/* What I Focus On Section */
+.about-focus-section {
+  margin-top: 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 32px;
+}
+
+.focus-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.focus-heading-icon {
+  color: var(--purple-bright);
+}
+
+.focus-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .focus-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.focus-card {
+  background: #111624;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: var(--transition-smooth);
+}
+
+.focus-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background: #151C2E;
+}
+
+.focus-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.focus-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A5B4FC;
+  font-size: 1.15rem;
+}
+
+.focus-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #94A3B8;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.focus-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.focus-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #94A3B8;
+}

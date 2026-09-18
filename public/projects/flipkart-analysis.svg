@@ -1,0 +1,130 @@
+﻿<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#14141e"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" rx="16" fill="url(#bgGrad2)"/>
+  <rect width="800" height="480" rx="16" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+  <!-- Grid -->
+  <g opacity="0.08">
+    <path d="M0 80 H800 M0 160 H800 M0 240 H800 M0 320 H800 M0 400 H800" stroke="#FFFFFF" stroke-dasharray="4 4"/>
+    <path d="M160 0 V480 M320 0 V480 M480 0 V480 M640 0 V480" stroke="#FFFFFF" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Title Bar -->
+  <g transform="translate(30, 25)">
+    <circle cx="8" cy="8" r="5" fill="#EF4444" opacity="0.8"/>
+    <circle cx="26" cy="8" r="5" fill="#F59E0B" opacity="0.8"/>
+    <circle cx="44" cy="8" r="5" fill="#10B981" opacity="0.8"/>
+    <text x="75" y="12" fill="#A1A1AA" font-family="'Space Grotesk', sans-serif" font-size="12" letter-spacing="1">E-COMMERCE SCRAPER // PRICING & RATING INTELLIGENCE</text>
+    <rect x="610" y="-2" width="120" height="22" rx="11" fill="rgba(124, 58, 237, 0.2)" stroke="#7C3AED" stroke-width="0.8"/>
+    <text x="625" y="13" fill="#C4B5FD" font-family="sans-serif" font-size="10" font-weight="600">SCRAPED: 24,500+</text>
+  </g>
+
+  <!-- Metric summary -->
+  <g transform="translate(30, 65)">
+    <rect width="230" height="75" rx="10" fill="#111116" stroke="rgba(255,255,255,0.06)"/>
+    <text x="18" y="24" fill="#71717A" font-family="sans-serif" font-size="11">TOTAL PRODUCTS PARSED</text>
+    <text x="18" y="55" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="700">24,890</text>
+    <text x="160" y="52" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="600">99.4% Valid</text>
+
+    <g transform="translate(255, 0)">
+      <rect width="230" height="75" rx="10" fill="#111116" stroke="rgba(255,255,255,0.06)"/>
+      <text x="18" y="24" fill="#71717A" font-family="sans-serif" font-size="11">MEDIAN DISCOUNT RATE</text>
+      <text x="18" y="55" fill="#A855F7" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="700">38.5%</text>
+      <text x="145" y="52" fill="#C4B5FD" font-family="sans-serif" font-size="11" font-weight="600">Peak: 72%</text>
+    </g>
+
+    <g transform="translate(510, 0)">
+      <rect width="230" height="75" rx="10" fill="#111116" stroke="rgba(255,255,255,0.06)"/>
+      <text x="18" y="24" fill="#71717A" font-family="sans-serif" font-size="11">AVG SENTIMENT SCORE</text>
+      <text x="18" y="55" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="700">4.21 / 5</text>
+      <text x="165" y="52" fill="#34D399" font-family="sans-serif" font-size="11" font-weight="600">+12% YoY</text>
+    </g>
+  </g>
+
+  <!-- Distribution Histogram Chart -->
+  <g transform="translate(30, 165)">
+    <rect width="470" height="275" rx="12" fill="#111116" stroke="rgba(255,255,255,0.06)"/>
+    <text x="20" y="30" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Price Elasticity vs Customer Rating Distribution</text>
+    <text x="20" y="48" fill="#71717A" font-family="sans-serif" font-size="11">Log-transformed price bins compared across categories</text>
+
+    <!-- Bars -->
+    <g transform="translate(25, 240)">
+      <!-- bar 1 -->
+      <rect x="10" y="-40" width="36" height="40" rx="4" fill="#2E1065"/>
+      <text x="15" y="18" fill="#71717A" font-family="sans-serif" font-size="10">&lt;500</text>
+
+      <!-- bar 2 -->
+      <rect x="60" y="-95" width="36" height="95" rx="4" fill="#581C87"/>
+      <text x="65" y="18" fill="#71717A" font-family="sans-serif" font-size="10">1K</text>
+
+      <!-- bar 3 -->
+      <rect x="110" y="-145" width="36" height="145" rx="4" fill="#7C3AED"/>
+      <text x="115" y="18" fill="#71717A" font-family="sans-serif" font-size="10">2.5K</text>
+
+      <!-- bar 4 -->
+      <rect x="160" y="-170" width="36" height="170" rx="4" fill="url(#purpleGrad2)"/>
+      <text x="165" y="18" fill="#FFFFFF" font-family="sans-serif" font-size="10" font-weight="600">5K</text>
+
+      <!-- bar 5 -->
+      <rect x="210" y="-130" width="36" height="130" rx="4" fill="#7C3AED"/>
+      <text x="215" y="18" fill="#71717A" font-family="sans-serif" font-size="10">10K</text>
+
+      <!-- bar 6 -->
+      <rect x="260" y="-85" width="36" height="85" rx="4" fill="#6B21A8"/>
+      <text x="265" y="18" fill="#71717A" font-family="sans-serif" font-size="10">20K</text>
+
+      <!-- bar 7 -->
+      <rect x="310" y="-55" width="36" height="55" rx="4" fill="#4C1D95"/>
+      <text x="315" y="18" fill="#71717A" font-family="sans-serif" font-size="10">50K</text>
+
+      <!-- bar 8 -->
+      <rect x="360" y="-30" width="36" height="30" rx="4" fill="#2E1065"/>
+      <text x="365" y="18" fill="#71717A" font-family="sans-serif" font-size="10">100K+</text>
+    </g>
+  </g>
+
+  <!-- Category Breakdown Card -->
+  <g transform="translate(520, 165)">
+    <rect width="250" height="275" rx="12" fill="#111116" stroke="rgba(255,255,255,0.06)"/>
+    <text x="18" y="30" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="600">Category Share</text>
+    <text x="18" y="48" fill="#71717A" font-family="sans-serif" font-size="11">Availability & Stock Status</text>
+
+    <!-- Donut/Pill stats -->
+    <g transform="translate(18, 75)">
+      <text x="0" y="12" fill="#D4D4D8" font-family="sans-serif" font-size="12">Electronics & Audio</text>
+      <text x="180" y="12" fill="#C4B5FD" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">38%</text>
+      <rect y="20" width="210" height="6" rx="3" fill="#1E1E28"/>
+      <rect y="20" width="160" height="6" rx="3" fill="#A855F7"/>
+    </g>
+
+    <g transform="translate(18, 125)">
+      <text x="0" y="12" fill="#D4D4D8" font-family="sans-serif" font-size="12">Fashion & Apparel</text>
+      <text x="180" y="12" fill="#C4B5FD" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">26%</text>
+      <rect y="20" width="210" height="6" rx="3" fill="#1E1E28"/>
+      <rect y="20" width="115" height="6" rx="3" fill="#7C3AED"/>
+    </g>
+
+    <g transform="translate(18, 175)">
+      <text x="0" y="12" fill="#D4D4D8" font-family="sans-serif" font-size="12">Home & Appliances</text>
+      <text x="180" y="12" fill="#C4B5FD" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">21%</text>
+      <rect y="20" width="210" height="6" rx="3" fill="#1E1E28"/>
+      <rect y="20" width="90" height="6" rx="3" fill="#6D28D9"/>
+    </g>
+
+    <g transform="translate(18, 225)">
+      <text x="0" y="12" fill="#D4D4D8" font-family="sans-serif" font-size="12">Other Accessories</text>
+      <text x="180" y="12" fill="#C4B5FD" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700">15%</text>
+      <rect y="20" width="210" height="6" rx="3" fill="#1E1E28"/>
+      <rect y="20" width="60" height="6" rx="3" fill="#4C1D95"/>
+    </g>
+  </g>
+</svg>

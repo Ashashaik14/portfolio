@@ -1,0 +1,208 @@
+:root {
+  --bg-primary: #080A10;
+  --bg-secondary: #0E121D;
+  --bg-card: #131826;
+  --bg-card-hover: #1A2134;
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --purple-primary: #4F46E5;
+  --purple-bright: #6366F1;
+  --purple-glow: rgba(79, 70, 229, 0.22);
+  --purple-glow-intense: rgba(99, 102, 241, 0.4);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-bright: rgba(255, 255, 255, 0.18);
+  --border-purple: rgba(99, 102, 241, 0.4);
+  
+  /* Portfolio Design System Tokens */
+  --ds-primary: #4F46E5;
+  --ds-primary-hover: #4338CA;
+  --ds-bg: #F8FAFC;
+  --ds-surface: #FFFFFF;
+  --ds-text: #111827;
+  --ds-text-secondary: #6B7280;
+  --ds-border: #E5E7EB;
+
+  --font-display: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F1F28;
+  border-radius: 4px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-primary);
+}
+
+::selection {
+  background: var(--purple-primary);
+  color: #FFFFFF;
+}
+
+/* Atmospheric Background Layers */
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--bg-primary);
+}
+
+/* Background Ambient Lighting */
+.ambient-glow-top {
+  position: fixed;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, rgba(5, 5, 5, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-side {
+  position: fixed;
+  top: 40%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, rgba(5, 5, 5, 0) 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle Grid Canvas */
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: center center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Noise Vignette */
+.vignette-overlay {
+  position: fixed;
+  inset: 0;
+  box-shadow: inset 0 0 140px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Typography Presets */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  outline: none;
+}
+
+/* Section Shared Rules */
+.section-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 48px;
+}
+
+@media (max-width: 1024px) {
+  .section-wrapper {
+    padding: 100px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 80px 20px;
+  }
+}
+
+/* Section Header Typography */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple-bright);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}

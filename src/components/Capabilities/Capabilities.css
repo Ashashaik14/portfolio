@@ -1,0 +1,141 @@
+.capabilities-section {
+  position: relative;
+  background: #080A12;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.capabilities-header {
+  margin-bottom: 48px;
+  max-width: 800px;
+}
+
+.figma-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #F24E1E;
+  background: rgba(242, 78, 30, 0.12);
+  border: 1px solid rgba(242, 78, 30, 0.25);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+}
+
+.badge-figma-icon {
+  font-size: 0.95rem;
+}
+
+.capabilities-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.figma-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1080px) {
+  .figma-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .figma-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.figma-skill-card {
+  position: relative;
+  background: #111624;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: var(--transition-smooth);
+}
+
+.figma-skill-card:hover {
+  background: #151C2E;
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(79, 70, 229, 0.15);
+}
+
+.figma-card-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.figma-skill-card:hover .figma-card-glow {
+  opacity: 1;
+}
+
+.figma-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.figma-icon-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A5B4FC;
+  font-size: 1.3rem;
+}
+
+.figma-badge-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #818CF8;
+  background: rgba(79, 70, 229, 0.1);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.figma-skill-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.figma-skill-main-desc {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  line-height: 1.5;
+}
+
+.figma-skill-subdetail {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  line-height: 1.55;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 12px;
+  margin-top: auto;
+}

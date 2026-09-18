@@ -1,0 +1,277 @@
+.expertise-section {
+  position: relative;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.expertise-header {
+  margin-bottom: 56px;
+  max-width: 780px;
+}
+
+.expertise-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.skills-three-col-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 28px;
+}
+
+@media (max-width: 1080px) {
+  .skills-three-col-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.skill-category-card {
+  position: relative;
+  background: #111624;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: var(--transition-smooth);
+}
+
+.skill-category-card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(79, 70, 229, 0.12);
+}
+
+.skill-category-card.highlight-card {
+  border-color: rgba(99, 102, 241, 0.3);
+  background: linear-gradient(180deg, #131A2D 0%, #0F1422 100%);
+}
+
+.skill-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cat-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.cat-purple {
+  background: rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  color: #A5B4FC;
+}
+
+.cat-blue {
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #7DD3FC;
+}
+
+.cat-emerald {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #6EE7B7;
+}
+
+.cat-kicker {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #94A3B8;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.cat-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.cat-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #94A3B8;
+}
+
+/* Category 1: Design Skills Pills */
+.cat-pills-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: auto;
+}
+
+@media (max-width: 540px) {
+  .cat-pills-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  transition: var(--transition-fast);
+}
+
+.skill-pill-item:hover {
+  background: rgba(79, 70, 229, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #FFFFFF;
+}
+
+.pill-check-icon {
+  color: #10B981;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+/* Category 2: Tools Cards */
+.cat-tools-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.tool-box-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  transition: var(--transition-fast);
+}
+
+.tool-box-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateX(4px);
+}
+
+.tool-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.figma-icon {
+  background: rgba(242, 78, 30, 0.15);
+  border: 1px solid rgba(242, 78, 30, 0.3);
+  color: #F24E1E;
+}
+
+.canva-icon {
+  background: rgba(0, 196, 204, 0.15);
+  border: 1px solid rgba(0, 196, 204, 0.3);
+  color: #00C4CC;
+}
+
+.tool-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 3px;
+}
+
+.tool-usage {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #94A3B8;
+}
+
+/* Category 3: Tech List */
+.cat-tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.tech-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+.tech-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tech-logo {
+  font-size: 1.3rem;
+}
+
+.html-logo { color: #E34F26; }
+.css-logo { color: #1572B6; }
+.js-logo { color: #F7DF1E; }
+
+.tech-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #F1F5F9;
+}
+
+.tech-level-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #6EE7B7;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.tech-job-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  color: #CBD5E1;
+  background: rgba(79, 70, 229, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.tech-job-note .note-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6366F1;
+  flex-shrink: 0;
+}
